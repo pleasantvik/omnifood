@@ -41,6 +41,8 @@ mainNav.addEventListener("click", function (e) {
     document.querySelector(id).scrollIntoView({
       behaviour: "smooth",
     });
+
+    header.classList.remove("nav-open");
   }
 });
 
@@ -88,7 +90,7 @@ const revealSection = function (entries, observer) {
 
 const sectionObserver = new IntersectionObserver(revealSection, {
   root: null,
-  threshold: 0.15,
+  threshold: 0,
 });
 
 allSection.forEach(function (section) {
